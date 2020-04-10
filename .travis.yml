@@ -23,6 +23,7 @@ after_script:
   - git config user.email "laiyuancai@gmail.com"
   - git add .
   - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"
+  - git remote add origin git@github.com:bytepoem/blog.git
   - git push --force --quiet "https://${DEPLOY_KEY}@${GH_REF}" master:master
 
 env:
