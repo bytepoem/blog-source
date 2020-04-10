@@ -31,6 +31,6 @@ env:
   
 notifications:
   email:
-    - laiyuancai@
+    - laiyuancai@gmail.com
   on_success: change
   on_failure: always
