@@ -1,0 +1,36 @@
+language: node_js
+
+node_js: stable
+
+cache:
+  directories:
+  - node_modules
+before_install:
+  - export TZ='Asia/Shanghai'
+  - npm install -g hexo-cli
+
+install:
+  - npm install
+
+script:
+  - hexo clean
+  - hexo g && gulp
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "bytepoem"
+  - git config user.email "laiyuancai@gmail.com"
+  - git add .
+  - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"
+  - git push --force --quiet "https://${DEPLOY_KEY}@${GH_REF}" master:master
+
+env:
+  global:
+    - GH_REF: github.com:bytepoem/blog.git
+  
+notifications:
+  email:
+    - laiyuancai@
+  on_success: change
+  on_failure: always
