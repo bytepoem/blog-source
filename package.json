@@ -32,5 +32,11 @@
     "hexo-server": "^1.0.0",
     "inferno": "^7.3.3",
     "inferno-create-element": "^7.3.3"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-uglify-es": "^2.0.0"
   }
 }
