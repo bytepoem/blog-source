@@ -21,6 +21,8 @@ after_script:
   - git init
   - git config user.name "bytepoem"
   - git config user.email "laiyuancai@gmail.com"
+  - sed -i "s/valine_app_id/${valine_app_id}/g" ./themes/icarus/_config.yml
+  - sed -i "s/valine_app_key/${valine_app_key}/g" ./themes/icarus/_config.yml
   - git add .
   - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"
   - git push --force --quiet "https://${DEPLOY_KEY}@${GH_REF}" master:master
