@@ -2,8 +2,11 @@
 title: 在 spring boot 中使用 @Crossorign 注解解决跨域问题
 date: 2020-04-11 19:52:46
 permalink: spring-boot-crossorign
-category: spring boot
-tags: spring boot, java
+categories:
+- spring boot
+tags: 
+- spring boot
+- java
 toc: true
 ---
 

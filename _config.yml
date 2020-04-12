@@ -96,7 +96,11 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: icarus
 
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: 'git'
+## RSS
+plugin:
+- hexo-generator-feed
+# Feed Atom
+feed:
+type: atom
+path: atom.xml
+limit: 20
