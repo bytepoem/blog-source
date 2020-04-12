@@ -1,11 +1,15 @@
 ---
 title: 在 spring boot 中使用 @Crossorign 注解解决跨域问题
 date: 2020-04-11 19:52:46
-tags: spring boot
+permalink: spring-boot-crossorign
+category: spring boot
+tags: spring boot, java
 toc: true
 ---
 
 最近在 spring boot 中写 rest api 时发现前端 ajax 调用的时候会产生跨域问题。于是乎想到用 jsonp 的方式进行解决，但是发现 `AbstractJsonpResponseBodyAdvice` 这个类在 spring boot 2.0 已经被废弃了，上官网发现有新姿势——[《Enabling Cross Origin Requests for a RESTful Web Service》](https://spring.io/guides/gs/rest-service-cors/)。
+
+<!-- more -->
 
 ### 1. 浏览器的同源政策
 
