@@ -4,7 +4,7 @@ node_js: stable
 
 cache:
   directories:
-  - node_modules
+    - node_modules
 before_install:
   - export TZ='Asia/Shanghai'
   - npm install -g hexo-cli
@@ -15,8 +15,9 @@ install:
 script:
   - sed -i "s/valine_app_id/${valine_app_id}/g" ./themes/icarus/_config.yml
   - sed -i "s/valine_app_key/${valine_app_key}/g" ./themes/icarus/_config.yml
+  - npm ls --depth 0
   - hexo clean
-  - hexo g --debug
+  - hexo g && gulp
 
 after_script:
   - cd ./public
@@ -30,7 +31,7 @@ after_script:
 env:
   global:
     - GH_REF: github.com/bytepoem/blog.git
-  
+
 notifications:
   email:
     - laiyuancai@gmail.com
