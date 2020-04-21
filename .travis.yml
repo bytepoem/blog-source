@@ -2,9 +2,13 @@ language: node_js
 
 node_js: stable
 
+cache:
+  directories:
+    - node_modules
 before_install:
   - export TZ='Asia/Shanghai'
   - npm install -g hexo-cli
+  - npm install -g hexo --registry=https://registry.npm.taobao.org
 
 install:
   - npm install
