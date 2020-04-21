@@ -104,3 +104,5 @@ feed:
 type: atom
 path: atom.xml
 limit: 20
+
+all_minifier: false
