@@ -16,7 +16,7 @@ script:
   - sed -i "s/valine_app_id/${valine_app_id}/g" ./themes/icarus/_config.yml
   - sed -i "s/valine_app_key/${valine_app_key}/g" ./themes/icarus/_config.yml
   - hexo clean
-  - hexo g && gulp
+  - hexo g
 
 after_script:
   - cd ./public
