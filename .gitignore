@@ -120,5 +120,4 @@ Thumbs.db
 db.json
 public/
 .deploy*/
-package-lock.json
 .history
