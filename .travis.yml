@@ -21,6 +21,7 @@ script:
 
 after_script:
   - cd ./public
+  - cat 2020/04/11/spring-boot-crossorign/index.html
   - git init
   - git config user.name "bytepoem"
   - git config user.email "laiyuancai@gmail.com"
